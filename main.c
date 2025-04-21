@@ -1,6 +1,7 @@
 void Delay(unsigned long x){
  unsigned long i;
  for (i = 0; i < x; i++);
+ for (j = 0; j < 100; j++);
 }
 
 void main(void){
