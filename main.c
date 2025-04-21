@@ -12,11 +12,13 @@ void main(void){
     for (i = 0; i < 8; i=i+1)
     {
      IOPORT1 = ~(0x03<<i);
+	 IOPORT1 = ~(0x01<<i);
       Delay(30000);
     }
     for (i = 7; i >= 0; i=i-1)
     {
       IOPORT1 = ~(0x03<<i);
+	  IOPORT1 = ~(0x01<<i);
       Delay(30000);
     }
   }
