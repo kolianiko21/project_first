@@ -7,6 +7,7 @@ void Delay(unsigned long x){
 void main(void){
  signed char i;
  IOPORT1 = 0x00;
+ clk_config();
  Delay(1000);
   while (1){
     for (i = 0; i < 8; i=i+1)
@@ -24,3 +25,7 @@ void main(void){
   }
 }
 
+void clk_config()
+{
+	RTC -> PLL |= 0x10;
+}
